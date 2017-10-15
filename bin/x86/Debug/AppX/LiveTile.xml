@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tile>
+  <visual displayname="Teamen">
+    <binding template="TileSmall">
+      <text hint-wrap="true"></text>
+      <image src="Assets/25.jpg" placement="background" hint-align="center"></image>
+    </binding>
+
+    <binding template="TileMedium">
+      <text hint-style="subtitle" hint-wrap="true"></text>
+      <text hint-style="captionSubtle" hint-wrap="true"></text>
+      <image src="Assets/25.jpg" placement="background" hint-align="center"></image>
+    </binding>
+
+    <binding template="TileWide">
+      <text hint-style="subtitle" hint-wrap="true"></text>
+      <text hint-style="captionSubtle" hint-wrap="true"></text>
+      <image src="Assets/25.jpg" placement="background" hint-align="center"></image>
+    </binding>
+
+    <binding template="TileLarge">
+      <text hint-style="subtitle" hint-wrap="true"></text>
+      <text hint-style="captionSubtle" hint-wrap="true"></text>
+      <image src="Assets/25.jpg" placement="background" hint-align="center"></image>
+    </binding>
+  </visual>
+</tile>

@@ -1,0 +1,57 @@
+﻿<Application
+    x:Class="teamen.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:teamen"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <Style x:Key="GridStyle" TargetType="Grid">
+            <Setter Property="Background" Value="Linen" />
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style x:Key="LoginStyle" TargetType="Button">
+            <Setter Property="Background" Value="CornflowerBlue" />
+        </Style>
+
+        <DataTemplate x:Key="MessageDataTemplate">
+            <Grid HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Ellipse Height="55" Width="55" Grid.Column="0">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding icon}" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <StackPanel Grid.Column="1" CornerRadius="4"  Padding="15" Orientation="Vertical">
+                    <TextBlock Text="{Binding name}" />
+                    <TextBlock Text="{Binding message}"  Foreground="Black"/>
+                    <TextBlock Text="{Binding time}"  Foreground="LightGray" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SelfMessageDataTemplate">
+            <Grid HorizontalAlignment="Right"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" CornerRadius="4" Background="#FF00E2FF" Padding="15">
+                    <TextBlock Text="{Binding message}" Foreground="White"></TextBlock>
+                </Grid>
+                <StackPanel Grid.Row="1"  Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{Binding time}"  Foreground="LightGray" Margin="0,0,10,0"></TextBlock>
+                    <TextBlock Text="{Binding name}" Foreground="LightGray"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <local:MessageItemDataTemplateSelector x:Key="MessageItemDataTemplateSelector"></local:MessageItemDataTemplateSelector>
+    </Application.Resources>
+</Application>
