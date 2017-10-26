@@ -1,6 +1,5 @@
 ## Universal Windows Platform Application
 
-[](../Assets/teamen.mp4)
-
-
+![未能显示](../Assets/teamen_1.gif)
+![](../Assets/teamen_2.gif)
 
